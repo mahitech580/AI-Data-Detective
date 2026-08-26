@@ -4,6 +4,9 @@
 
 AI Data Detective is a Python-powered data intelligence tool that analyzes CSV datasets and generates useful insights through automated profiling, data-quality analysis, statistics, correlation analysis, visualization, machine learning, and report generation.
 
+===
+https://mahitech580.github.io/AI-Data-Detective/
+======
 ---
 
 ## 🚀 Features
