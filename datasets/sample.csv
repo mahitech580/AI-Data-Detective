@@ -1,0 +1,16 @@
+customer_id,age,income,tenure,monthly_spend,support_calls,satisfaction,contract_type,churn
+1001,24,32000,3,1200,4,5,Month-to-month,1
+1002,31,54000,24,2100,1,8,Two-year,0
+1003,46,72000,48,2850,0,9,Two-year,0
+1004,29,41000,8,1700,5,4,Month-to-month,1
+1005,37,62000,18,2300,2,7,One-year,0
+1006,52,91000,60,3900,1,10,Two-year,0
+1007,27,35000,5,1450,6,3,Month-to-month,1
+1008,41,68000,30,2600,1,8,One-year,0
+1009,33,48000,12,1950,3,6,Month-to-month,1
+1010,58,99000,72,4200,0,10,Two-year,0
+1011,39,59000,21,2400,2,7,One-year,0
+1012,26,30000,4,1100,7,2,Month-to-month,1
+1013,44,76000,42,3100,1,9,Two-year,0
+1014,35,51000,15,2050,4,5,One-year,1
+1015,49,83000,54,3450,1,9,Two-year,0
