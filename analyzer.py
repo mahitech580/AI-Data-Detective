@@ -9,9 +9,16 @@ class DatasetAnalyzer:
 
     def profile(self):
         numeric = self.df.select_dtypes(include=np.number).columns.tolist()
-        categorical = self.df.select_dtypes(
-            include=["object", "category", "bool"]
-        ).columns.tolist()
+        categorical = [
+            col
+            for col in self.df.columns
+            if (
+                pd.api.types.is_object_dtype(self.df[col].dtype)
+                or pd.api.types.is_string_dtype(self.df[col].dtype)
+                or isinstance(self.df[col].dtype, pd.CategoricalDtype)
+                or pd.api.types.is_bool_dtype(self.df[col].dtype)
+            )
+        ]
 
         return {
             "rows": len(self.df),
