@@ -118,7 +118,19 @@ class MLEngine:
         stratify = None
 
         if task == "classification":
-            if y.value_counts().min() >= 2:
+            class_counts = y.value_counts()
+            class_count = int(class_counts.size)
+            test_rows = int(np.ceil(len(work) * 0.20))
+            train_rows = len(work) - test_rows
+
+            # Stratification is only valid when every class can appear in
+            # both partitions. Fall back to a regular split for high-cardinality
+            # targets whose class count exceeds the smaller partition.
+            if (
+                int(class_counts.min()) >= 2
+                and test_rows >= class_count
+                and train_rows >= class_count
+            ):
                 stratify = y
 
         X_train, X_test, y_train, y_test = train_test_split(
